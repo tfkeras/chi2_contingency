@@ -10,7 +10,7 @@ b_count = 90000
 # 仮説Bの成果
 b_conv = 3100
 # カイ二乗検定を行う
-data = np.array([[a_conv,a_count],[b_conv,b_count]])
+data = np.array([[a_conv,a_count - a_conv],[b_conv,b_count - b_conv]])
 chi2, p, dof, expected = stats.chi2_contingency(data)
 # 結果が偶然である確率を出力
 print("結果が偶然である確率 %.2f %%" % (p*100))
